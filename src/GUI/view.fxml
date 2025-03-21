@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="GUI.Controller">
+    <top>
+        <Label text="Patient and Appointment Management System" style="-fx-font-size: 20; -fx-padding: 10;"/>
+    </top>
+    <center>
+        <TabPane>
+            <!-- Patient Management Tab -->
+            <Tab text="Patient Management">
+                <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+                    <Button text="Add Patient" onAction="#addPatient" />
+                    <Button text="View All Patients" onAction="#viewAllPatients" />
+                    <Button text="Update Patient" onAction="#updatePatient" />
+                    <Button text="Filter Patients by Name" onAction="#filterByName" />
+                    <Button text="Filter Patients by Age" onAction="#filterByAge" />
+                    <Button text="Delete Patient" onAction="#deletePatient" />
+                </VBox>
+            </Tab>
+
+            <!-- Appointment Management Tab -->
+            <Tab text="Appointment Management">
+                <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+                    <Button text="Create Appointment" onAction="#createAppointment" />
+                    <Button text="View All Appointments" onAction="#viewAllAppointments" />
+                    <Button text="Cancel Appointment" onAction="#cancelAppointment" />
+                    <Button text="Finish Appointment" onAction="#finishAppointment" />
+                    <Button text="Delete Appointment" onAction="#deleteAppointment" />
+                    <Button text="Filter by Status" onAction="#filterByStatus" />
+                    <Button text="Filter by Patient Name" onAction="#filterByPatientName" />
+                    <Button text="Filter by Date" onAction="#filterByDate" />
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+    <bottom>
+        <Button text="Exit" onAction="#exitApplication" style="-fx-padding: 10;"/>
+    </bottom>
+</BorderPane>
